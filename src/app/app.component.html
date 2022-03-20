@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-6 p-5">
+        <div class="col-12 mb-2">
+            <input type="number" step="1" min="2" max="10" class="col-4" [(ngModel)]="n" (ngModelChange)="createMatrix()">
+            <input type="button" class="col-4" value="Generate" (click)="generate()">
+        </div>
+        <table class="col-12">
+            <tr>
+                <td class="title"></td>
+                <td class="title" *ngFor="let distance of distances[0]; let i = index">
+                    x{{i + 1}}
+                </td>
+            </tr>
+            <tr *ngFor="let row of distances; let rowIndex = index">
+                <td class="title">
+                    x{{rowIndex + 1}}
+                </td>
+                <td *ngFor="let cell of row">
+                    {{ cell }}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="chart" class="col-6"></div>
+</div>

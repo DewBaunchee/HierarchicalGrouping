@@ -1,0 +1,17 @@
+#chart {
+    height: 900px;
+}
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    height: 800px;
+}
+
+table td {
+    text-align: center;
+    border: black 1px solid;
+}
+
+table .title {
+    background: gainsboro;
+}
